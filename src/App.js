@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import Header from './components/header/header.component';
+import Balance from './components/balance/balance.component';
+import IncomeExpenses from './components/income Expense/income.expenses.component';
+import TransactionList from './components/Transaction List/transaction.list.component';
+import AddTransaction from './components/add transaction/add.transaction.component';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <div className='container'>
+        <Balance />
+        <IncomeExpenses />
+        <TransactionList /> 
+        <AddTransaction />
+      </div>
+      
     </div>
   );
 }
